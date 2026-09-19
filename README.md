@@ -50,5 +50,5 @@ Most likely, you can get better results by playing around with the min-x/y and s
 **2. Diagonal swipes on the touchscreen follow a "ladder" pattern**  
 Yeah, I noticed that too, but haven't found the fix yet. Maybe someone knows how to fix it?  
 **3. Sound not working**  
-Same as 2.
+~~Same as 2.~~ Try updating the system (`pacman -Syu`). For me, at least, the sound started working better after that.
 
