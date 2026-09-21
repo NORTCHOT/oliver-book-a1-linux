@@ -17,7 +17,7 @@ The touchscreen driver is usually already included in the kernel. You can check 
 ```
 you need the firmware, which you can download [here](https://raw.githubusercontent.com/NORTCHOT/oliver-book-a1-linux/refs/heads/main/mssl1680.fw). Then move the file to the `/lib/firmware/silead/` directory.  
 After that you need to add these parameters to your boot options:  
-`i2c_touchscreen_props=MSSL1680:touchscreen-min-x=4:touchscreen-min-y=3:touchscreen-size-x=1981:touchscreen-size-y=1529:touchscreen-swapped-x-y:silead,home-button`  
+`i2c_touchscreen_props=MSSL1680:touchscreen-min-x=8:touchscreen-min-y=8:touchscreen-size-x=1980:touchscreen-size-y=1520:touchscreen-swapped-x-y:silead,home-button`  
 That's it. Just reboot and touchscreen should work properly.
 
 ## Accelerometer
@@ -45,10 +45,8 @@ That's all.
 Everything else should usually work fine. But if you've encountered some other issues, know how to fix something else or see a mistake in that guide - PRs are open.
 
 ## Known issues
-**1. Touchscreen taps don't quite match up with the actual ones**  
-Most likely, you can get better results by playing around with the min-x/y and size-x/y values. But I'm too lazy :D  
-**2. Diagonal swipes on the touchscreen follow a "ladder" pattern**  
+**1. Diagonal swipes on the touchscreen follow a "ladder" pattern**  
 Yeah, I noticed that too, but haven't found the fix yet. Maybe someone knows how to fix it?  
-**3. Sound not working**  
-~~Same as 2.~~ Try updating the system (`pacman -Syu`). For me, at least, the sound started working better after that.
+**2. Sound not working**  
+~~Same as 1.~~ Try updating the system (`pacman -Syu`). For me, at least, the sound started working better after that.
 
